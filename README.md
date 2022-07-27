@@ -3,11 +3,7 @@
 ## Steps to Execute:
 
 ### 1) Install necessary softwares:
- import copy from 'copy-text-to-clipboard';
-
-button.addEventListener('click', () => {
-	copy('🦄🌈');
-});
+<copy-button> hi </copy-button>
   $ sudo apt-get install git
   $ sudo apt-get install iverilog
   $ sudo apt-get install gtkwave
