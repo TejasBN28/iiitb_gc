@@ -4,9 +4,9 @@
 
 ### 1) Install necessary softwares:
 <copy-button> hi </copy-button>
-  $ sudo apt-get install git
-  $ sudo apt-get install iverilog
-  $ sudo apt-get install gtkwave
+  $ sudo apt-get install git \n
+  $ sudo apt-get install iverilog \n
+  $ sudo apt-get install gtkwave \n
 
 ### 2) Functional Simulation:
   $ git clone https://github.com/TejasBN28/iiitb_gc.git
