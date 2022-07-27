@@ -18,9 +18,10 @@ The digital circuit takes clock, enable and reset as input. It generates an 8-bi
 | reset | input | Resets the counter to 0 |
 | gray_count[7:0] | output | 8-bit gray code output |
 
-	Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence.
+<br>Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence. [^2]
+	
   <p align="center">
-  <img src="/images/waveform.PNG">
+  <img src="/images/waveform.png">
 </p><br>
 
 ## Steps to execute the Project:
@@ -51,4 +52,4 @@ The digital circuit takes clock, enable and reset as input. It generates an 8-bi
 ## *References*
 [^1]: Varun Akula, Dr. Vishwani D. Agrawal, James J. Danaher. [Comparison of power consumption of 4-bit binary counters with various state encodings including gray and one-hot codes](https://www.eng.auburn.edu/~vagrawal/COURSE/E6270_Spr15/PROJECT/REPORTS/Varun%20Akula%20Project%20Report.pdf). Auburn University
 
-[^2]: [8-bit Gray Counter](https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-examples/horizontal/ver-gray-counter.html) from INTEL FPGA Support Resources
+[^2]: [8-bit Gray Counter](https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-examples/horizontal/ver-gray-counter.html) from INTEL FPGA Support Resources for the verilog design of gray counter.
