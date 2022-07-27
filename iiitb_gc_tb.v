@@ -28,6 +28,8 @@ module iiitb_gc_tb();
     
     initial
     begin
+        $dumpfile("iiitb_gc.vcd");
+        $dumpvars(0, iiitb_gc_tb);
         clk = 0;
         reset = 1;
         enable = 1;
