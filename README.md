@@ -1,2 +1,1 @@
-# iiitb_gc
-Physical Design of a gray counter implemented with skywater 130 pdk
+# iiitb_gc - international institute of information technology bangalore gray counter
