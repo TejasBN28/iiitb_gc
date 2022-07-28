@@ -1,5 +1,5 @@
 # iiitb_gc - gray counter
-The focus of this project is to implement an 8-bit gray code counter in skywater 130nm and determine its functional, pre-layout and post layout characteristics (namely power, performance and area). <br>
+The focus of this project is to implement an 8-bit gray code counter in skywater 130nm and determine its functional, pre-layout and post layout characteristics (namely power, performance and area). <br><br>
 *Note: Circuit requires further optimization to improve performance. Design yet to be modified.*
 
 ## Introduction
