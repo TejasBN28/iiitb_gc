@@ -6,11 +6,12 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern. Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
 
 ## Gray Code Counter - Verilog Implementation  
-The Gray Code counter block diagram is shown below. <br>
+The Gray Code counter block diagram is shown below. [^2]<br>
  <p align="center">
   <img width="350" height="200" src="/images/block_diagram.PNG">
 </p><br>
-The digital circuit takes clock, enable and reset as input. It generates an 8-bit gray code sequence at every positive clock edge. The port description of the gray code counter is shown in Table below. [^2]
+The digital circuit takes clock, enable and reset as input. It generates an 8-bit gray code sequence at every positive clock edge. The port description of the gray code counter is shown in Table below. 
+
 
 | PORT NAME | PORT TYPE | DESCRIPTION |
 |-----------|-----------|-------------|
