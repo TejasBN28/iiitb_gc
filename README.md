@@ -10,7 +10,7 @@ The Gray Code counter block diagram is shown below. <br>
  <p align="center">
   <img width="350" height="200" src="/images/block_diagram.PNG">
 </p><br>
-The digital circuit takes clock, enable and reset as input. It generates an 8-bit gray code sequence at every positive clock edge. The port description of the gray code counter is shown in Table below.
+The digital circuit takes clock, enable and reset as input. It generates an 8-bit gray code sequence at every positive clock edge. The port description of the gray code counter is shown in Table below. [^2]
 
 | PORT NAME | PORT TYPE | DESCRIPTION |
 |-----------|-----------|-------------|
@@ -19,13 +19,8 @@ The digital circuit takes clock, enable and reset as input. It generates an 8-bi
 | reset | input | Resets the counter to 0 |
 | gray_count[7:0] | output | 8-bit gray code output |
 
-<br>Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence. [^2]
-	
-  <p align="center">
-  <img src="/images/waveform.png">
-</p><br>
 
-## Steps to execute the Project:
+## Functional Simulation
 
 ### 1) Installing necessary softwares:
   ```
@@ -36,7 +31,7 @@ The digital circuit takes clock, enable and reset as input. It generates an 8-bi
   $ sudo apt-get install gtkwave 
   ```
 
-### 2) Functional Simulation:
+### 2) Executing the Project:
   ```
   $ git clone https://github.com/TejasBN28/iiitb_gc.git
   
@@ -48,6 +43,13 @@ The digital circuit takes clock, enable and reset as input. It generates an 8-bi
   
   $ gtkwave iiitb_gc.vcd
 ```
+
+<br>Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence.
+	
+  <p align="center">
+  <img src="/images/waveform.png">
+</p><br>
+
 ## Contributors
 
 - **Tejas B N**
