@@ -24,7 +24,7 @@ The Gray Code counter block diagram is shown below. [^2]<br>
  <p align="center">
   <img width="350" height="200" src="/images/block_diagram.PNG">
 </p><br>
-The digital circuit takes clock, enable and reset as input. It generates an 8-bit gray code sequence at every positive clock edge. The port description of the gray code counter is shown in Table below. 
+The digital circuit takes clock, enable and reset as input. It generates an 8-bit gray code sequence at every positive clock edge. The port description of the gray code counter is shown in Table below. <br>
 
 
 | PORT NAME | PORT TYPE | DESCRIPTION |
@@ -66,6 +66,14 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
   <img src="/images/waveform.png">
 </p><br>
 
+# 5. Synthesis
+The software used to run gate level synthesis is Yosys. Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the Yosys C++ code base. [^5]
+
+```
+git clone https://github.com/YosysHQ/yosys.git
+make
+sudo make install make test
+```
 
 # Author
 
@@ -93,3 +101,5 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
 [^3]: Icarus Verilog - [iverilog](http://iverilog.icarus.com/)
 
 [^4]: GTK Wave [documentation](http://gtkwave.sourceforge.net/gtkwave.pdf)
+
+[^5]: [Yosys](https://yosyshq.net/yosys/) synthesis tool
