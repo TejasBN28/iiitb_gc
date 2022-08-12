@@ -92,6 +92,13 @@ Then, open terminal in the folder iiitb_gc and type the below command.
 ```
 yosys -s yosys_run.sh
 ```
+On running the yosys script, we get the following:
+<p align="center">
+  <img src="/images/Synth_ckt.png">
+</p><br><br>
+<p align="center">
+  <img src="/images/Stat.png">
+</p><br>
 
 # Author
 
