@@ -39,24 +39,18 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
 
 ### 1) Installing necessary softwares:
   ```
-  $ sudo apt-get install git 
-  
-  $ sudo apt-get install iverilog 
-  
-  $ sudo apt-get install gtkwave 
+  sudo apt-get install git 
+  sudo apt-get install iverilog 
+  sudo apt-get install gtkwave 
   ```
 
 ### 2) Executing the Project:
   ```
-  $ git clone https://github.com/TejasBN28/iiitb_gc.git
-  
-  $ cd iiitb_gc
-  
-  $ iverilog iiitb_gc.v iiitb_gc_tb.v -o iiitb_gc
-  
-  $ ./iiitb_gc
-  
-  $ gtkwave iiitb_gc.vcd
+  git clone https://github.com/TejasBN28/iiitb_gc.git
+  cd iiitb_gc
+  iverilog iiitb_gc.v iiitb_gc_tb.v -o iiitb_gc
+  ./iiitb_gc
+  gtkwave iiitb_gc.vcd
 ```
 
 <br>Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence.
