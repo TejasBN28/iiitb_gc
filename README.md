@@ -92,7 +92,7 @@ Then, open terminal in the folder iiitb_gc and type the below command.
 ```
 yosys -s yosys_run.sh
 ```
-On running the yosys script, we get the following:
+On running the yosys script, we get the following output:
 <p align="center">
   <img src="/images/Synth_ckt.png">
 </p><br><br>
@@ -108,7 +108,10 @@ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 iiitb_gc_synth.v iiitb_gc_tb.v iiitb_gc/ve
 ./iiitb_gc
 gtkwave iiitb_gc.vcd
 ```
-
+Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence.
+<p align="center">
+  <img src="/images/waveform_post_GLS.png">
+</p><br>
 
 # Author
 
