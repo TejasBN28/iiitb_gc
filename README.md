@@ -101,6 +101,14 @@ On running the yosys script, we get the following:
 </p><br>
 
 # 6. Gate Level Simulation GLS
+GLS stands for gate level simulation. When we write the RTL code, we test it by giving it some stimulus through the testbench and check it for the desired specifications. Similarly, we run the netlist as the design under test (dut) with the same testbench. Gate level simulation is done to verify the logical correctness of the design after synthesis. Also, it ensures the timing of the design. <br>
+Commands to run the GLS are given below.
+```
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 iiitb_gc_synth.v iiitb_gc_tb.v iiitb_gc/verilog_model/primitives.v /iiitb_gc/verilog_model/sky130_fd_sc_hd.v -iiitb_gc
+./iiitb_gc
+gtkwave iiitb_gc.vcd
+```
+
 
 # Author
 
