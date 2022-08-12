@@ -5,7 +5,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
 # Table of contents
  - [1. Introduction](#1-Introduction)
  - [2. Application of Gray Counter](#2-Application-of-Gray-Counter)
- - [3. Gray Code Counter - Verilog Implementation](#3-Gray-Code-Counter-Verilog-Implementation)
+ - [3. Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)
  - [4. Functional Simulation](#4-Functional-Simulation)
  - [5. Synthesis](#5-Synthesis)
  - [6. Gate Level Simulation - GLS](#6-Gate-Level-Simulation-GLS)
@@ -19,7 +19,7 @@ Gray code counter is a digital counter that counts such that each successive bit
 The gray code counter has various applications including analog to digital converters, error detection and correction in memory and digital communication, genetic algorithms, DNA computing, bio-informatics, optical information processing, quantum computations and nanotechnology.
 
 
-# 3. Gray Code Counter - Verilog Implementation  
+# 3. Verilog Implementation of Gray Code Counter
 The Gray Code counter block diagram is shown below. [^2]<br>
  <p align="center">
   <img width="350" height="200" src="/images/block_diagram.PNG">
