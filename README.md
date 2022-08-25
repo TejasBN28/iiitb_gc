@@ -166,7 +166,14 @@ $   sudo make install
 ```
 type **magic** terminal to check whether it installed succesfully or not. type **exit** to exit magic.
 
-
+## Generating the Layout
+ 
+Download the config.json file and place it in the `iiitb_gc` folder.To generate the layout, type the following commands
+```
+cd OpenLane
+make mount
+./flow.tcl -design iiitb_gc
+```
 
 
 # Author
