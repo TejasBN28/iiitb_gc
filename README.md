@@ -1240,11 +1240,6 @@ endmodule
 
 Also, sta report post synthesis can be viewed by going to the location `logs\synthesis\12-cts.log`
 
-## Power Distribution Network generation
-Unlike the general ASIC flow, Power Distribution Network generation is not a part of floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses:
-```
-gen_pdn
-```
 
 ## Routing
 The command to run routing is 
@@ -1263,6 +1258,13 @@ run_routing
 <p align="center">
   <img src="/images/rout2.png">
 </p><br>
+
+Area of the chip is 3288.43 micro meter sq.
+
+<p align="center">
+  <img src="/images/area.png">
+</p><br>
+
 
 
 # Author
