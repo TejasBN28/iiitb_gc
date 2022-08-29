@@ -167,7 +167,7 @@ $   sudo make install
 ```
 type **magic** terminal to check whether it installed succesfully or not. type **exit** to exit magic.
 
-## Invoking OpenLane 
+## Running OpenLane 
  
 Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` folder. The `config.json` file is given below as well.
 ```
@@ -196,10 +196,11 @@ Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` fo
 Now, paste the verilog code `iiitb_gc.v`, `sky130_vsdinv.lef`, `sky130_fd_sc_hd__fast.lib`,  `sky130_fd_sc_hd__slow.lib` and `sky130_fd_sc_hd__typical.lib`inside the folder `OpenLane/designs/iiitb_gc/src`
 
 
-To generate the layout, type the following commands
+To invoke OpenLane, type the following commands
 ```
 cd OpenLane
 make mount
+./flow.tcl -interactive
 ```
 
 
