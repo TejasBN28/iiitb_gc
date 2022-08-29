@@ -524,6 +524,15 @@ module iiitb_gc(clk, enable, reset, gray_count);
 endmodule
 ```
 
+The next step is to run `floorplan` and `placement`. Type the following commands.
+```
+run_floorplan
+run_placement
+```
+<p align="center">
+  <img src="/images/flpl.png">
+</p><br>
+
 # Author
 
 - **Tejas B N**
