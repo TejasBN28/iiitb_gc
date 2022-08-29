@@ -9,7 +9,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
  - [Functional Simulation](#4-Functional-Simulation)
  - [Synthesis](#5-Synthesis)
  - [Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)
- - [Layout](#6-Layout)
+ - [Physical Design](#6-Physical-Design)
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
@@ -114,7 +114,7 @@ Few count sequence of the gray code counter is displayed in below. At the first 
   <img src="/images/waveform_post_GLS.png">
 </p><br>
 
-# 6. Layout
+# 6. Physical Design
 
 ## Openlane
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
@@ -173,7 +173,6 @@ Download the config.json file and place it in the `iiitb_gc` folder.To generate 
 ```
 cd OpenLane
 make mount
-
 ```
 
 
