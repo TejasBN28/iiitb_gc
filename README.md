@@ -205,7 +205,7 @@ prep -design iiitb_gc
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 ```
 <p align="center">
-  <img src="/images/invoking_open.png">
+  <img src="/images/invoking_openlane.png">
 </p><br>
 
 Now, to run synthesis, type the following command
