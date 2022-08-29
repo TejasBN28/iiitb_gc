@@ -176,13 +176,6 @@ make mount
 
 ```
 
-<p align="center">
-  <img src="/images/openlane_flow.png">
-</p><br>
-<p align="center">
-  <img src="/images/layout.png">
-</p><br>
-
 
 # Author
 
