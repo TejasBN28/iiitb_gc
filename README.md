@@ -196,12 +196,32 @@ Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` fo
 Now, paste the verilog code `iiitb_gc.v`, `sky130_vsdinv.lef`, `sky130_fd_sc_hd__fast.lib`,  `sky130_fd_sc_hd__slow.lib` and `sky130_fd_sc_hd__typical.lib`inside the folder `OpenLane/designs/iiitb_gc/src`
 
 
-To invoke OpenLane, type the following commands
+To invoke OpenLane, type the following commands. On typing the following commands, `runs` folder is created inside the `iiitb_gc` folder. 
 ```
 cd OpenLane
 make mount
 ./flow.tcl -interactive
+prep -design iiitb_gc
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 ```
+<p align="center">
+  <img src="/images/invoking_open.png">
+</p><br>
+
+Now, to run synthesis, type the following command
+```
+run_synthesis
+```
+<p align="center">
+  <img src="/images/stats_.png">
+</p><br>
+
+<p align="center">
+  <img src="/images/synth.png">
+</p><br>
+
+The synthesized netlist is present in the results folder and the stats are present in the reports folder. 
+
 
 
 # Author
