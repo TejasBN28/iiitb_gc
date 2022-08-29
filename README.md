@@ -547,7 +547,9 @@ magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b
 <p align="center">
   <img src="/images/e1.png">
 </p><br>
-
+<p align="center">
+  <img src="/images/fp.png">
+</p><br>
 
 
 The placement can be viewed by typing the following command.
