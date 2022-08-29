@@ -533,6 +533,28 @@ run_placement
   <img src="/images/flpl.png">
 </p><br>
 
+The placement can be viewed by typing the following command.
+```
+magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b45b8e774ae7a84899a5a778b6b0b/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef read iiitb_gc.def &
+```
+
+<p align="center">
+  <img src="/images/pl1.png">
+</p><br>
+
+<p align="center">
+  <img src="/images/pl2.png">
+</p><br>
+
+The next step is to run run clock tree synthesis. The CTS run adds clock buffers in therefore buffer delays come into picture and our analysis from here on deals with real clocks. To run clock tree synthesis, type the following commands
+```
+run_cts
+```
+
+<p align="center">
+  <img src="/images/cts.png">
+</p><br>
+
 # Author
 
 - **Tejas B N**
