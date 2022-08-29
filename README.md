@@ -523,6 +523,7 @@ module iiitb_gc(clk, enable, reset, gray_count);
   );
 endmodule
 ```
+Also, sta report post synthesis can be viewed by going to the location `logs\synthesis\2-sta.log`
 
 The next step is to run `floorplan` and `placement`. Type the following commands.
 ```
