@@ -167,9 +167,36 @@ $   sudo make install
 ```
 type **magic** terminal to check whether it installed succesfully or not. type **exit** to exit magic.
 
-## Generating the Layout
+## Invoking OpenLane 
  
-Download the config.json file and place it in the `iiitb_gc` folder.To generate the layout, type the following commands
+Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` folder. The `config.json` file is given below as well.
+```
+{
+    "DESIGN_NAME": "iiitb_gc",
+    "VERILOG_FILES": "dir::src/iiitb_gc.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "clk",
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "CLOCK_PERIOD": 24,
+    "pdk::sky130*": {
+        "SYNTH_MAX_FANOUT": 6,
+        "FP_CORE_UTIL": 35,
+        "scl::sky130_fd_sc_hd": {
+            "FP_CORE_UTIL": 30
+           
+        }
+    },
+   "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+   "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+   "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+   "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",
+   "TEST_EXTERNAL_GLOB": "dir::../iiitb_gc/src/*"
+}
+```
+Now, paste the verilog code `iiitb_gc.v`, `sky130_fd_sc_hd__fast.lib`,  `sky130_fd_sc_hd__slow.lib` and `sky130_fd_sc_hd__typical.lib`inside the folder `OpenLane/designs/iiitb_gc/src`
+
+
+To generate the layout, type the following commands
 ```
 cd OpenLane
 make mount
