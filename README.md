@@ -203,6 +203,7 @@ make mount
 ./flow.tcl -interactive
 prep -design iiitb_gc
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
 ```
 <p align="center">
   <img src="/images/invoking_openlane.png">
