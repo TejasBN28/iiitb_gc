@@ -173,7 +173,7 @@ Download the config.json file and place it in the `iiitb_gc` folder.To generate 
 ```
 cd OpenLane
 make mount
-./flow.tcl -design iiitb_gc
+
 ```
 
 <p align="center">
