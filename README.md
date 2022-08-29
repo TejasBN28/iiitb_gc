@@ -208,6 +208,8 @@ set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
   <img src="/images/invoking_openlane.png">
 </p><br>
 
+## Synthesis:
+
 Now, to run synthesis, type the following command
 ```
 run_synthesis
@@ -523,6 +525,10 @@ module iiitb_gc(clk, enable, reset, gray_count);
   );
 endmodule
 ```
+Here, we notice that our custom cell `sky130_vsdinv` is displayed in the netlist generated.
+
+## Floorplan and Placement
+
 Also, sta report post synthesis can be viewed by going to the location `logs\synthesis\2-sta.log`
 
 The next step is to run `floorplan` and `placement`. Type the following commands.
@@ -534,10 +540,23 @@ run_placement
   <img src="/images/flpl.png">
 </p><br>
 
+The floorplan can be viewed by typing the following command.
+```
+magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b45b8e774ae7a84899a5a778b6b0b/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read iiitb_gc.def &
+```
+<p align="center">
+  <img src="/images/e1.png">
+</p><br>
+
+
+
 The placement can be viewed by typing the following command.
 ```
-magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b45b8e774ae7a84899a5a778b6b0b/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef read iiitb_gc.def &
+magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b45b8e774ae7a84899a5a778b6b0b/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read iiitb_gc.def &
 ```
+<p align="center">
+  <img src="/images/e2.png">
+</p><br>
 
 <p align="center">
   <img src="/images/pl1.png">
@@ -1216,6 +1235,8 @@ endmodule
 ```
 
 Also, sta report post synthesis can be viewed by going to the location `logs\synthesis\12-cts.log`
+
+Unlike the general ASIC flow, Power Distribution Network generation is not a part of floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses:
 
 # Author
 
