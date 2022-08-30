@@ -236,6 +236,11 @@ add_lefs -src $lefs
   <img src="/images/invoking_openlane.png">
 </p><br>
 
+Now, we can observe that the `sky130_vsdinv` is included in `merged.nom.lef` file.
+<p align="center">
+  <img src="/images/merged.png">
+</p><br>
+
 ## Synthesis:
 
 Now, to run synthesis, type the following command
