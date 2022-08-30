@@ -6,7 +6,9 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
 [1. Introduction](#1-Introduction)<br><br>
 [2. Application of Gray Counter](#2-Application-of-Gray-Counter)<br><br>
 [3. Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)<br><br>
-[4. Functional Simulation](#4-Functional-Simulation)<br><br>
+[4. Functional Simulation](#4-Functional-Simulation)<br>
+ - [4.1. Softwares Used](#41-Softwares-Used)<br>
+ - [4.2. Simulation Results](#42-Simulation-Results)<br><br>
 [5. Synthesis](#5-Synthesis)<br><br>
 [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br><br>
 [7. Physical Design](#6-Physical-Design)<br><br>
@@ -42,21 +44,21 @@ The digital circuit takes clock, enable and reset as input. It generates an 8-bi
 
 
 # 4. Functional Simulation
-### Softwares used
+## 4.1. Softwares used
 ### - **iverilog**
 Icarus Verilog is a Verilog simulation and synthesis tool. It operates as a compiler, compiling source code written in Verilog (IEEE-1364) into some target format. [^3]
 
 ### - **gtkwave**
 GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing. [^4]
 
-### 1) Installing necessary softwares:
+### Installing necessary softwares:
   ```
   sudo apt-get install git 
   sudo apt-get install iverilog 
   sudo apt-get install gtkwave 
   ```
-
-### 2) Executing the Project:
+ ## 4.2. Simulation Results
+ ### Executing the Project:
   ```
   git clone https://github.com/TejasBN28/iiitb_gc.git
   cd iiitb_gc
