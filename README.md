@@ -14,7 +14,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
    - [5.2. Run Synthesis](#52-Run-Synthesis)<br>
  - [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br>
  - [7. Creating Custom Cell](#7-Creating-Custom-Cell)
- - [8. Physical Design](#6-Physical-Design)<br>
+ - [8. Physical Design](#8-Physical-Design)<br>
    - [8.1. Software Used](#81-Softwares-Used)
    - [8.2. Preperation for Running OpenLane](#82-Preperation-for-Running-OpenLane)
    - [8.3. Synthesis](#83-Synthesis)
