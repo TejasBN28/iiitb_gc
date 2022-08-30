@@ -178,7 +178,7 @@ sudo apt-get install libcairo2-dev
 sudo apt-get install mesa-common-dev libglu1-mesa-dev
 sudo apt-get install libncurses-dev
 ```
-#### Install magic**
+#### Install magic
 ```
 git clone https://github.com/RTimothyEdwards/magic
 cd magic/
@@ -195,23 +195,25 @@ Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` fo
 {
     "DESIGN_NAME": "iiitb_gc",
     "VERILOG_FILES": "dir::src/iiitb_gc.v",
-    "CLOCK_PORT": "clk",
-    "CLOCK_NET": "clk",
+    "CLOCK_PORT": "clkin",
+    "CLOCK_NET": "clkin",
     "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
     "CLOCK_PERIOD": 65,
+    "PL_TARGET_DENSITY": 0.7,
+    "FP_SIZING" : "relative",
     "pdk::sky130*": {
-        "SYNTH_MAX_FANOUT": 6,
-        "FP_CORE_UTIL": 35,
+        "FP_CORE_UTIL": 30,
         "scl::sky130_fd_sc_hd": {
-            "FP_CORE_UTIL": 30
-           
+            "FP_CORE_UTIL": 20
         }
     },
-   "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
-   "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
-   "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
-   "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",
-   "TEST_EXTERNAL_GLOB": "dir::../iiitb_gc/src/*"
+    
+    "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+    "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+    "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+    "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
+    "TEST_EXTERNAL_GLOB": "dir::/src/*"
+
 }
 ```
 Now, paste the verilog code `iiitb_gc.v`, `sky130_vsdinv.lef`, `sky130_fd_sc_hd__fast.lib`,  `sky130_fd_sc_hd__slow.lib` and `sky130_fd_sc_hd__typical.lib`inside the folder `OpenLane/designs/iiitb_gc/src`
