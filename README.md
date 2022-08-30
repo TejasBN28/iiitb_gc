@@ -3,17 +3,17 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
 *Note: Circuit requires further optimization to improve performance. Design yet to be modified.*
 
 # Table of contents
- - [1. Introduction](#1-Introduction)<br><br>
- - [2. Application of Gray Counter](#2-Application-of-Gray-Counter)<br><br>
+ - [1. Introduction](#1-Introduction)<br>
+ - [2. Application of Gray Counter](#2-Application-of-Gray-Counter)<br>
  - [3. Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)<br><br>
  - [4. Functional Simulation](#4-Functional-Simulation)<br>
    - [4.1. Softwares Used](#41-Softwares-Used)<br>
-   - [4.2. Simulation Results](#42-Simulation-Results)<br><br>
+   - [4.2. Simulation Results](#42-Simulation-Results)<br>
  - [5. Synthesis](#5-Synthesis)<br>
    - [5.1. Softwares Used](#51-Softwares-Used)<br>
-   - [5.2. Run Synthesis](#52-Run-Synthesis)<br><br>
- - [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br><br>
- - [7. Physical Design](#6-Physical-Design)<br><br>
+   - [5.2. Run Synthesis](#52-Run-Synthesis)<br>
+ - [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br>
+ - [7. Physical Design](#6-Physical-Design)<br>
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
@@ -337,9 +337,12 @@ run_cts
   <img src="/images/cts.png">
 </p><br>
 
-Also, the netlist with clock buffers can be viewed by going to the location `results\cts\iiitb_gc.v`
+The netlist with clock buffers can be viewed by going to the location `results\cts\iiitb_gc.v`
 
 Also, sta report post synthesis can be viewed by going to the location `logs\synthesis\12-cts.log`
+<p align="center">
+  <img src="/images/cts_sta.png">
+</p><br>
 
 
 ## Routing
@@ -365,7 +368,10 @@ ALso, `sky130_vsdinv` can be viewed in the routing layout.
   <img src="/images/vsdinv_postrouting.png">
 </p><br>
 
-
+Area of the chip is 4384.215 sq micrometers.
+<p align="center">
+  <img src="/images/area.png">
+</p><br>
 
 # Author
 
