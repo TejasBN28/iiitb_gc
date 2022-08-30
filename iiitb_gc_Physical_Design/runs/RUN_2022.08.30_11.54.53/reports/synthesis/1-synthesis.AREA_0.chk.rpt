@@ -1,0 +1,12 @@
+
+23. Executing CHECK pass (checking for obvious problems).
+Checking module iiitb_gc...
+Warning: Wire iiitb_gc.\gray_count [7] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [6] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [5] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [4] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [3] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [2] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [1] is used but has no driver.
+Warning: Wire iiitb_gc.\gray_count [0] is used but has no driver.
+Found and reported 8 problems.
