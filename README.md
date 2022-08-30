@@ -261,15 +261,21 @@ The synthesized netlist is present in the results folder and the stats are prese
 
 
 Here, we notice that our custom cell `sky130_vsdinv` is displayed in the netlist generated.
-
-## Floorplan and Placement
+<p align="center">
+  <img src="/images/prs.png">
+</p><br>
 
 Also, sta report post synthesis can be viewed by going to the location `logs\synthesis\2-sta.log`
+
+<p align="center">
+  <img src="/images/slack_synth.png">
+</p><br>
+
+## Floorplan
 
 The next step is to run `floorplan` and `placement`. Type the following commands.
 ```
 run_floorplan
-run_placement
 ```
 <p align="center">
   <img src="/images/flpl.png">
@@ -286,8 +292,13 @@ magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b
   <img src="/images/fp.png">
 </p><br>
 
+## Placement
 
 The placement can be viewed by typing the following command.
+```
+run_placement
+```
+
 ```
 magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b45b8e774ae7a84899a5a778b6b0b/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read iiitb_gc.def &
 ```
