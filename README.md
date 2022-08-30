@@ -70,8 +70,10 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
 ```
 
 <br>Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence.
-	
-  <p align="center">
+<p align="center">
+  <img src="/images/p1.png">
+</p><br>
+<p align="center">
   <img src="/images/waveform.png">
 </p><br>
 
