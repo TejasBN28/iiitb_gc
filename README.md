@@ -22,9 +22,9 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
    - [7.6. Clock Tree Synthesis](#76-Clock-Tree-Synthesis)
    - [7.7 Routing](#77-Routing)
  - [Author](#8-Author)
- - [Acknowledgement](Acknowledgement)
- - [Contact Information](Contact-Information)
- - [References](References)
+ - [Acknowledgement](#9-Acknowledgement)
+ - [Contact Information](#10-Contact-Information)
+ - [References](#11-References)
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
@@ -384,11 +384,11 @@ Area of the chip is 4384.215 sq micrometers.
   <img src="/images/area.png">
 </p><br>
 
-# Author
+# 8. Author
 
 - **Tejas B N**
 
-# Acknowledgments
+# 9. Acknowledgments
 
 
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
@@ -396,13 +396,13 @@ Area of the chip is 4384.215 sq micrometers.
 - V N Muralidhara, Associate Professor, IIIT Bangalore
 
 
-# Contact Information
+# 10. Contact Information
 
 - Tejas B N, Postgraduate Student, International Institute of Information Technology, Bangalore  bntejas@gmail.com
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 
-# *References*
+# 11. *References*
 [^1]: Varun Akula, Dr. Vishwani D. Agrawal, James J. Danaher. [Comparison of power consumption of 4-bit binary counters with various state encodings including gray and one-hot codes](https://www.eng.auburn.edu/~vagrawal/COURSE/E6270_Spr15/PROJECT/REPORTS/Varun%20Akula%20Project%20Report.pdf). Auburn University
 
 [^2]: [8-bit Gray Counter](https://www.asic-world.com/examples/verilog/gray.html) from ASIC World for the verilog design of gray counter.
