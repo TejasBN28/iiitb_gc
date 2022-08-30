@@ -3,13 +3,13 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
 *Note: Circuit requires further optimization to improve performance. Design yet to be modified.*
 
 # Table of contents
- - [Introduction](#1-Introduction)
- - [Application of Gray Counter](#2-Application-of-Gray-Counter)
- - [Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)
- - [Functional Simulation](#4-Functional-Simulation)
- - [Synthesis](#5-Synthesis)
- - [Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)
- - [Physical Design](#6-Physical-Design)
+ - [1. Introduction](#1-Introduction)
+ - [2. Application of Gray Counter](#2-Application-of-Gray-Counter)
+ - [3.Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)
+ - [4. Functional Simulation](#4-Functional-Simulation)
+ - [5. Synthesis](#5-Synthesis)
+ - [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)
+ - [7. Physical Design](#6-Physical-Design)
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
