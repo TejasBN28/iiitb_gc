@@ -13,18 +13,19 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
    - [5.1. Softwares Used](#51-Softwares-Used)<br>
    - [5.2. Run Synthesis](#52-Run-Synthesis)<br>
  - [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br>
- - [7. Physical Design](#6-Physical-Design)<br>
-   - [7.1. Software Used](#71-Softwares-Used)
-   - [7.2. Preperation for Running OpenLane](#72-Preperation-for-Running-OpenLane)
-   - [7.3. Synthesis](#73-Synthesis)
-   - [7.4. Floorplan](#74-Floorplan)
-   - [7.5. Placement](#75-Placement)
-   - [7.6. Clock Tree Synthesis](#76-Clock-Tree-Synthesis)
-   - [7.7 Routing](#77-Routing)
- - [Author](#8-Author)
- - [Acknowledgement](#9-Acknowledgement)
- - [Contact Information](#10-Contact-Information)
- - [References](#11-References)
+ - [7. Creating Custom Cell](#7-Creating-Custom-Cell)
+ - [8. Physical Design](#6-Physical-Design)<br>
+   - [8.1. Software Used](#81-Softwares-Used)
+   - [8.2. Preperation for Running OpenLane](#82-Preperation-for-Running-OpenLane)
+   - [8.3. Synthesis](#83-Synthesis)
+   - [8.4. Floorplan](#84-Floorplan)
+   - [8.5. Placement](#85-Placement)
+   - [8.6. Clock Tree Synthesis](#86-Clock-Tree-Synthesis)
+   - [8.7 Routing](#87-Routing)
+ - [Author](#9-Author)
+ - [Acknowledgement](#10-Acknowledgement)
+ - [Contact Information](#11-Contact-Information)
+ - [References](#12-References)
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
@@ -152,8 +153,8 @@ Few count sequence of the gray code counter is displayed in below. At the first 
   <img src="/images/waveform_post_GLS.png">
 </p><br>
 
-# 7. Physical Design
-## 7.1 Software Installation
+# 8. Physical Design
+## 8.1 Software Installation
 ### Openlane
 [OpenLane](https://github.com/The-OpenROAD-Project/OpenLane) is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
@@ -199,7 +200,7 @@ sudo make install
 ```
 type `magic` terminal to check whether it installed succesfully or not. Type `exit` to exit magic.
 
-## 7.2. Preperation for Running OpenLane 
+## 8.2. Preperation for Running OpenLane 
  
 Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` folder. The `config.json` file is given below as well.
 ```
@@ -254,7 +255,7 @@ Now, we can observe that the `sky130_vsdinv` is included in `merged.nom.lef` fil
   <img src="/images/merged.png">
 </p><br>
 
-## 7.3. Synthesis:
+## 8.3. Synthesis:
 
 Now, to run synthesis, type the following command
 ```
@@ -282,7 +283,7 @@ Also, sta report post synthesis can be viewed by going to the location `logs\syn
   <img src="/images/slack_synth.png">
 </p><br>
 
-## 7.4. Floorplan
+## 8.4. Floorplan
 
 The next step is to run `floorplan` and `placement`. Type the following commands.
 ```
@@ -311,7 +312,7 @@ Also, Die Area and Core Area can be viewed in the `reports/floorplan` directory.
   <img src="/images/core_area.png">
 </p><br>
 
-## 7.5. Placement
+## 8.5. Placement
 
 The placement can be viewed by typing the following command.
 ```
@@ -337,7 +338,7 @@ magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b
   <img src="/images/pl5.png">
 </p><br>
 
-## 7.6. Clock Tree Synthesis
+## 8.6. Clock Tree Synthesis
  
 The next step is to run run clock tree synthesis. The CTS run adds clock buffers in therefore buffer delays come into picture and our analysis from here on deals with real clocks. To run clock tree synthesis, type the following commands
 ```
@@ -356,7 +357,7 @@ Also, sta report post synthesis can be viewed by going to the location `logs\syn
 </p><br>
 
 
-## 7.7. Routing
+## 8.7. Routing
 The command to run routing is 
 ```
 run_routing
@@ -384,11 +385,11 @@ Area of the chip is 4384.215 sq micrometers.
   <img src="/images/area.png">
 </p><br>
 
-# 8. Author
+# 9. Author
 
 - **Tejas B N**
 
-# 9. Acknowledgments
+# 10. Acknowledgments
 
 
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
@@ -396,13 +397,13 @@ Area of the chip is 4384.215 sq micrometers.
 - V N Muralidhara, Associate Professor, IIIT Bangalore
 
 
-# 10. Contact Information
+# 11. Contact Information
 
 - Tejas B N, Postgraduate Student, International Institute of Information Technology, Bangalore  bntejas@gmail.com
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 
-# 11. *References*
+# 12. *References*
 [^1]: Varun Akula, Dr. Vishwani D. Agrawal, James J. Danaher. [Comparison of power consumption of 4-bit binary counters with various state encodings including gray and one-hot codes](https://www.eng.auburn.edu/~vagrawal/COURSE/E6270_Spr15/PROJECT/REPORTS/Varun%20Akula%20Project%20Report.pdf). Auburn University
 
 [^2]: [8-bit Gray Counter](https://www.asic-world.com/examples/verilog/gray.html) from ASIC World for the verilog design of gray counter.
