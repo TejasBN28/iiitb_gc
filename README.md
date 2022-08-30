@@ -142,59 +142,53 @@ Few count sequence of the gray code counter is displayed in below. At the first 
 </p><br>
 
 # 6. Physical Design
+## 6.1 Software Installation
+### Openlane
+[OpenLane](https://github.com/The-OpenROAD-Project/OpenLane) is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
-## Openlane
-OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
-
-more at https://github.com/The-OpenROAD-Project/OpenLane
-## Installation instructions 
+### Installation instructions 
 ```
-$   apt install -y build-essential python3 python3-venv python3-pip
+sudo apt install -y build-essential python3 python3-venv python3-pip
 ```
-Docker installation process: https://docs.docker.com/engine/install/ubuntu/
-
-goto home directory->
+### Docker
+Docker installation process for ubuntu is explained in this link: https://docs.docker.com/engine/install/ubuntu/. Alternatively, the following commands install the docker.
 ```
-$   git clone https://github.com/The-OpenROAD-Project/OpenLane.git
-$   cd OpenLane/
-$   sudo make
+git clone https://github.com/The-OpenROAD-Project/OpenLane.git
+cd OpenLane/
+sudo make
 ```
 To test the open lane
 ```
-$ sudo make test
+sudo make test
 ```
-It takes approximate time of 5min to complete. After 43 steps, if it ended with saying **Basic test passed** then open lane installed succesfully.
+It takes approximate time of 5 minutes to complete. After 43 steps, if it ended with saying **Basic test passed** then open lane installed succesfully.
 
-## Magic
-Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow.
-
-More about magic at http://opencircuitdesign.com/magic/index.html
+### Magic
+[Magic](http://opencircuitdesign.com/magic/index.html) is a venerable VLSI layout tool, written in the 1980's at Berkeley by John Ousterhout, now famous primarily for writing the scripting interpreter language Tcl. Due largely in part to its liberal Berkeley open-source license, magic has remained popular with universities and small companies. The open-source license has allowed VLSI engineers with a bent toward programming to implement clever ideas and help magic stay abreast of fabrication technology. However, it is the well thought-out core algorithms which lend to magic the greatest part of its popularity. Magic is widely cited as being the easiest tool to use for circuit layout, even for people who ultimately rely on commercial tools for their product design flow
 
 Run following commands one by one to fulfill the system requirement.
+#### Prerequisites for magic
+```
+sudo apt-get install m4
+sudo apt-get install tcsh
+sudo apt-get install csh
+sudo apt-get install libx11-dev
+sudo apt-get install tcl-dev tk-dev
+sudo apt-get install libcairo2-dev
+sudo apt-get install mesa-common-dev libglu1-mesa-dev
+sudo apt-get install libncurses-dev
+```
+#### Install magic**
+```
+git clone https://github.com/RTimothyEdwards/magic
+cd magic/
+./configure
+sudo make
+sudo make install
+```
+type `magic` terminal to check whether it installed succesfully or not. Type `exit` to exit magic.
 
-```
-$   sudo apt-get install m4
-$   sudo apt-get install tcsh
-$   sudo apt-get install csh
-$   sudo apt-get install libx11-dev
-$   sudo apt-get install tcl-dev tk-dev
-$   sudo apt-get install libcairo2-dev
-$   sudo apt-get install mesa-common-dev libglu1-mesa-dev
-$   sudo apt-get install libncurses-dev
-```
-**To install magic**
-goto home directory
-
-```
-$   git clone https://github.com/RTimothyEdwards/magic
-$   cd magic/
-$   ./configure
-$   sudo make
-$   sudo make install
-```
-type **magic** terminal to check whether it installed succesfully or not. type **exit** to exit magic.
-
-## Running OpenLane 
+### Running OpenLane 
  
 Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` folder. The `config.json` file is given below as well.
 ```
@@ -204,7 +198,7 @@ Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` fo
     "CLOCK_PORT": "clk",
     "CLOCK_NET": "clk",
     "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
-    "CLOCK_PERIOD": 24,
+    "CLOCK_PERIOD": 65,
     "pdk::sky130*": {
         "SYNTH_MAX_FANOUT": 6,
         "FP_CORE_UTIL": 35,
@@ -222,6 +216,12 @@ Download the config.json file and place it in the `OpenLane/designs/iiitb_gc` fo
 ```
 Now, paste the verilog code `iiitb_gc.v`, `sky130_vsdinv.lef`, `sky130_fd_sc_hd__fast.lib`,  `sky130_fd_sc_hd__slow.lib` and `sky130_fd_sc_hd__typical.lib`inside the folder `OpenLane/designs/iiitb_gc/src`
 
+<p align="center">
+  <img src="/images/p4.png">
+</p><br>
+<p align="center">
+  <img src="/images/p5.png">
+</p><br>
 
 To invoke OpenLane, type the following commands. On typing the following commands, `runs` folder is created inside the `iiitb_gc` folder. 
 ```
