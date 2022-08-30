@@ -154,7 +154,7 @@ Few count sequence of the gray code counter is displayed in below. At the first 
 </p><br>
 
 # 8. Physical Design
-## 8.1 Software Installation
+## 8.1. Software Installation
 ### Openlane
 [OpenLane](https://github.com/The-OpenROAD-Project/OpenLane) is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
