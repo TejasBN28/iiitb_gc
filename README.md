@@ -24,7 +24,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
  - [Author](Author)
  - [Acknowledgement](Acknowledgement)
  - [Contact Information](Contact-Information)
- - References](References)
+ - [References](References)
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
