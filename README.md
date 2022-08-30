@@ -5,7 +5,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
 # Table of contents
 [1. Introduction](#1-Introduction)<br>
 [2. Application of Gray Counter](#2-Application-of-Gray-Counter)<br>
-[3.Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)<br>
+[3. Verilog Implementation of Gray Code Counter](#3-Verilog-Implementation-of-Gray-Code-Counter)<br>
 [4. Functional Simulation](#4-Functional-Simulation)<br>
 [5. Synthesis](#5-Synthesis)<br>
 [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br>
