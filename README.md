@@ -153,6 +153,27 @@ Few count sequence of the gray code counter is displayed in below. At the first 
   <img src="/images/waveform_post_GLS.png">
 </p><br>
 
+# 7. Creating Custom Cell
+First, clone the github repo containing the inverter and prepare for the next steps.
+```
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+cd vsdstdcelldesign
+cp ./libs/sky130A.tech sky130A.tech
+magic -T sky130A.tech sky130_inv.mag &
+```
+On typing the following commands, the following netlist will open.
+
+<p align="center">
+  <img src="/images/inv.png">
+</p><br>
+
+Now, to extract the spice netlist, type the following commands in the tcl console.
+```
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
 # 8. Physical Design
 ## 8.1. Software Installation
 ### Openlane
