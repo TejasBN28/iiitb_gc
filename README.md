@@ -9,8 +9,9 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
  - [4. Functional Simulation](#4-Functional-Simulation)<br>
    - [4.1. Softwares Used](#41-Softwares-Used)<br>
    - [4.2. Simulation Results](#42-Simulation-Results)<br><br>
- - [5. Synthesis](#5-Synthesis)<br><br>
-   - [5.1. Softwares Used](#41-Softwares-Used)<br>
+ - [5. Synthesis](#5-Synthesis)<br>
+   - [5.1. Softwares Used](#51-Softwares-Used)<br>
+   - [5.2. Run Synthesis](#52-Run-Synthesis)>br><br>
  - [6. Gate Level Simulation GLS](#6-Gate-Level-Simulation-GLS)<br><br>
  - [7. Physical Design](#6-Physical-Design)<br><br>
 
@@ -78,14 +79,14 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
 ## 5.1. Softwares used
 ### - **Yosys**
 The software used to run gate level synthesis is Yosys. Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains. Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the Yosys C++ code base. [^5]
-#### ** Installing Prerequsites for Yosys**
+#### **Installing Prerequsites for Yosys**
  ```
  sudo apt-get install build-essential clang bison flex \
 	libreadline-dev gawk tcl-dev libffi-dev git \
 	graphviz xdot pkg-config python3 libboost-system-dev \
 	libboost-python-dev libboost-filesystem-dev zlib1g-dev
 ```
-#### ** Installing Latest Version of Yosys**
+#### **Installing Latest Version of Yosys**
 ```
 git clone https://github.com/YosysHQ/yosys.git
 make
