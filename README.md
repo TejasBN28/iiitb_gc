@@ -298,7 +298,7 @@ The placement can be viewed by typing the following command.
 ```
 run_placement
 ```
-
+The placement can be viewed by typing the following command.
 ```
 magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b45b8e774ae7a84899a5a778b6b0b/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read iiitb_gc.def &
 ```
