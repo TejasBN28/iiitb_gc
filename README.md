@@ -292,6 +292,14 @@ magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b
   <img src="/images/fp.png">
 </p><br>
 
+Also, Die Area and Core Area can be viewed in the `reports/floorplan` directory.
+<p align="center">
+  <img src="/images/die_area.png">
+</p><br>
+<p align="center">
+  <img src="/images/core_area.png">
+</p><br>
+
 ## Placement
 
 The placement can be viewed by typing the following command.
