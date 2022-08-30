@@ -115,6 +115,9 @@ yosys -s yosys_run.sh
 ```
 On running the yosys script, we get the following output:
 <p align="center">
+  <img src="/images/p2.png">
+</p><br>
+<p align="center">
   <img src="/images/Synth_ckt.png">
 </p><br><br>
 <p align="center">
