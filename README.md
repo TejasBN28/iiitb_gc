@@ -216,6 +216,23 @@ To get a grid and to ensure the ports are placed correctly we type the following
 ```
 grid 0.46um 0.34um 0.23um 0.17um
 ```
+In Magic Layout window, first source the .mag file for the design (here inverter). Then Edit >> Text which opens up a dialogue box. Then do the steps shown in the below figure.
+
+<p align="center">
+  <img src="/images/inv6.png">
+</p><br>
+
+<p align="center">
+  <img src="/images/inv7.png">
+</p><br>
+
+<p align="center">
+  <img src="/images/inv8.png">
+</p><br>
+
+<p align="center">
+  <img src="/images/inv9.png">
+</p><br>
 
 Now, to extract the lef file and save it, type the following command.
 ```
