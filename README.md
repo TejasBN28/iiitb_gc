@@ -21,7 +21,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
    - [7.5. Placement](#75-Placement)
    - [7.6. Clock Tree Synthesis](#76-Clock-Tree-Synthesis)
    - [7.7 Routing](#77-Routing)
- - [Author](Author)
+ - [Author](#8-Author)
  - [Acknowledgement](Acknowledgement)
  - [Contact Information](Contact-Information)
  - [References](References)
