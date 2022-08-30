@@ -322,6 +322,10 @@ magic -T /home/tejasbn/Desktop/OpenLane/pdks/volare/sky130/versions/44a43c23c81b
   <img src="/images/pl2.png">
 </p><br>
 
+<p align="center">
+  <img src="/images/pl5.png">
+</p><br>
+
 ## Clock Tree Synthesis
  
 The next step is to run run clock tree synthesis. The CTS run adds clock buffers in therefore buffer delays come into picture and our analysis from here on deals with real clocks. To run clock tree synthesis, type the following commands
@@ -356,10 +360,9 @@ run_routing
   <img src="/images/rout2.png">
 </p><br>
 
-Area of the chip is 3288.43 micro meter sq.
-
+ALso, `sky130_vsdinv` can be viewed in the routing layout.
 <p align="center">
-  <img src="/images/area.png">
+  <img src="/images/vsdinv_postrouting.png">
 </p><br>
 
 
