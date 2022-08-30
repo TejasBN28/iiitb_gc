@@ -132,6 +132,10 @@ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 iiitb_gc_synth.v iiitb_gc_tb.v verilog_mod
 ./iiitb_gc
 gtkwave iiitb_gc.vcd
 ```
+<p align="center">
+  <img src="/images/p3.png">
+</p><br>
+
 Few count sequence of the gray code counter is displayed in below. At the first positive edge of the clock, the counter resets to 0x00. From the second clock onwards, the counter starts to count in gray code sequence.
 <p align="center">
   <img src="/images/waveform_post_GLS.png">
