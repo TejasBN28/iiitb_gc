@@ -1,0 +1,9 @@
+clock clk 3000 50
+at clk 0 0 0 0
+at enable 0 0 0 0
+at reset 0 0 0 0
+slew clk 0 0 0 0
+slew enable 0 0 0 0
+slew reset 0 0 0 0
+load gray_count 0
+rat gray_count 200 200 250 250
