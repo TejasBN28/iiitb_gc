@@ -607,7 +607,9 @@ Now, the setup time of the D Flip Flop is extracted from the `sky130_fd_sc_hd__f
 
 From here, tsetup maximum is 0.2740052000 ns.
 
-Now Tclk maximum = (3.4761 +  0.2740052) ns = 3.7501052ns
+Now Tclk maximum = (3.4761 +  0.2740052) ns = 3.7501052ns.
+So, the chip performance is 266.659MHz.
+
 # 10. Author
 
 - **Tejas B N**
