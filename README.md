@@ -22,10 +22,14 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
    - [8.5. Placement](#85-Placement)
    - [8.6. Clock Tree Synthesis](#86-Clock-Tree-Synthesis)
    - [8.7 Routing](#87-Routing)
- - [Author](#9-Author)
- - [Acknowledgement](#10-Acknowledgement)
- - [Contact Information](#11-Contact-Information)
- - [References](#12-References)
+ - [9. Results](#9-Results)
+   - [9.1. Area](#91-Area)
+   - [9.2. Power](#92-Power)
+   - [9.3. Performance](#93-Performance)
+ - [Author](#10-Author)
+ - [Acknowledgement](#11-Acknowledgement)
+ - [Contact Information](#12-Contact-Information)
+ - [References](#13-References)
 
 # 1. Introduction
 Gray code counter is a digital counter that counts such that each successive bit patterns differs by only one bit. Unlike normal counters, there are no glitches in the count pattern (0 -> 1 -> 3 -> 2 -> 6 -> 7 ......... ). Since switching is less in gray code counters (i.e., exactly one-bit switches in one clock cycle), the power consumption of the gray code counter is significantly less compared to the normal counter.[^1] 
@@ -545,11 +549,19 @@ Area of the chip is 4384.215 sq micrometers.
   <img src="/images/area.png">
 </p><br>
 
-# 9. Author
+# 9. Results
+## 9.1. Area
+
+## 9.2. Power
+
+## 9.3. Performance
+
+
+# 10. Author
 
 - **Tejas B N**
 
-# 10. Acknowledgments
+# 11. Acknowledgments
 
 
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
@@ -557,13 +569,13 @@ Area of the chip is 4384.215 sq micrometers.
 - V N Muralidhara, Associate Professor, IIIT Bangalore
 
 
-# 11. Contact Information
+# 12. Contact Information
 
 - Tejas B N, Postgraduate Student, International Institute of Information Technology, Bangalore  bntejas@gmail.com
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 
-# 12. *References*
+# 13. *References*
 [^1]: Varun Akula, Dr. Vishwani D. Agrawal, James J. Danaher. [Comparison of power consumption of 4-bit binary counters with various state encodings including gray and one-hot codes](https://www.eng.auburn.edu/~vagrawal/COURSE/E6270_Spr15/PROJECT/REPORTS/Varun%20Akula%20Project%20Report.pdf). Auburn University
 
 [^2]: [8-bit Gray Counter](https://www.asic-world.com/examples/verilog/gray.html) from ASIC World for the verilog design of gray counter.
