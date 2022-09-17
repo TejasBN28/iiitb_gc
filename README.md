@@ -550,11 +550,13 @@ Area of the chip is 4384.215 sq micrometers.
 <p align="center">
   <img src="/images/area.png">
 </p><br>
+
 ## 9.2. Power 
 The total power consumed by the chip is 2.16 micro Watt
 <p align="center">
   <img src="/images/res2.png">
 </p><br>
+
 ## 9.3. Performance
 To find the performance of the chip, the netlist generated after the clock tree synthesis is considered. The generated netlist is analysed and is found  to contain 8 flipflops. Now, reg to reg path for all the flipflops are calculated. Initially, the path with the longest delay is considered. Then it is analysed if the reg to reg path exists. If it exists, then the particular path is considered for frequency calculations.
 
