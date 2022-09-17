@@ -592,6 +592,15 @@ To find the performance of the chip, the netlist generated after the clock tree 
   <img src="/images/pathreg2reg8.png">
 </p><br>
 
+Also, arrival time of the clock is calculated for all the clock pins of the 
+<p align="center">
+  <img src="/images/clkat.png">
+</p><br>
+Here, we observe that clock arrival time is same foe all the clock pins. So, it can be neglected. 
+
+On analysing, it is discovered that maximum reg to reg delay is from dff `sky130_fd_sc_hd__dfxtp_1 _71_` `CLK` pin to `D` pin of `sky130_fd_sc_hd__dfxtp_1 _72_`. The delay is 3.4761ns. 
+
+
 # 10. Author
 
 - **Tejas B N**
