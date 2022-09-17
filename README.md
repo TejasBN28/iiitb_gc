@@ -561,6 +561,10 @@ The total power consumed by the chip is 2.16 micro Watt
 To find the performance of the chip, the netlist generated after the clock tree synthesis is considered. The generated netlist is analysed and is found  to contain 8 flipflops. Now, reg to reg path for all the flipflops are calculated. Initially, the path with the longest delay is considered. Then it is analysed if the reg to reg path exists. If it exists, then the particular path is considered for frequency calculations.
 
 <p align="center">
+  <img src="/images/unit.png">
+</p><br>
+
+<p align="center">
   <img src="/images/pathreg2reg1.png">
 </p><br>
 
