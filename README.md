@@ -598,9 +598,16 @@ Also, arrival time of the clock is calculated for all the clock pins of the
 </p><br>
 Here, we observe that clock arrival time is same foe all the clock pins. So, it can be neglected. 
 
-On analysing, it is discovered that maximum reg to reg delay is from dff `sky130_fd_sc_hd__dfxtp_1 _71_` `CLK` pin to `D` pin of `sky130_fd_sc_hd__dfxtp_1 _72_`. The delay is 3.4761ns. 
+On analysing, it is discovered that maximum reg to reg delay is from D Flip Flop `sky130_fd_sc_hd__dfxtp_1 _71_` `CLK` pin to `D` pin of `sky130_fd_sc_hd__dfxtp_1 _74_`. The delay is 3.4761ns. 
 
+Now, the setup time of the D Flip Flop is extracted from the `sky130_fd_sc_hd__ff_n40C_1v56.lib` file. Steps of extracting the setup time is given [here](https://www.physicaldesign4u.com/2020/05/how-setup-and-hold-checks-are-defined.html?m=1).
+<p align="center">
+  <img src="/images/setup.png">
+</p><br>
 
+From here, tsetup maximum is 0.2740052000 ns.
+
+Now Tclk maximum = (3.4761 +  0.2740052) ns = 3.7501052ns
 # 10. Author
 
 - **Tejas B N**
