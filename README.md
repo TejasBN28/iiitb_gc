@@ -544,15 +544,18 @@ ALso, `sky130_vsdinv` can be viewed in the routing layout.
   <img src="/images/vsdinv_postrouting.png">
 </p><br>
 
+# 9. Results
+## 9.1. Area
 Area of the chip is 4384.215 sq micrometers.
 <p align="center">
   <img src="/images/area.png">
 </p><br>
 
-# 9. Results
-## 9.1. Area
-
-## 9.2. Power
+## 9.2. Power 
+The total power consumed by the chip is 2.16 micro Watt
+<p align="center">
+  <img src="/images/res2.png">
+</p><br>
 
 ## 9.3. Performance
 
