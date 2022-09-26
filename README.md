@@ -565,7 +565,7 @@ To find the performance of the chip, the netlist generated after the clock tree 
 </p><br>
 
 <p align="center">
-  <img src="/images/pathreg2reg1.png">
+  <img src="/images/pathreg2reg11.png">
 </p><br>
 
 <p align="center">
@@ -598,7 +598,7 @@ To find the performance of the chip, the netlist generated after the clock tree 
 
 Also, arrival time of the clock is calculated for all the clock pins of the 
 <p align="center">
-  <img src="/images/clkat.png">
+  <img src="/images/clkat1.png">
 </p><br>
 Here, we observe that clock arrival time is same foe all the clock pins. So, it can be neglected. 
 
