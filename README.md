@@ -22,7 +22,7 @@ The focus of this project is to implement an 8-bit gray code counter in skywater
    - [8.5. Placement](#85-Placement)
    - [8.6. Clock Tree Synthesis](#86-Clock-Tree-Synthesis)
    - [8.7 Routing](#87-Routing)
- - [9. Results](#9-Results)
+ - [9. Results for Mid-Term Examination](#9-Results-for-Mid-Term-Examination)
    - [9.1. Area](#91-Area)
    - [9.2. Power](#92-Power)
    - [9.3. Performance](#93-Performance)
@@ -554,16 +554,10 @@ The post synthesis gate count for my design is 47 cells.
 ## 9.2. Area from box command
 Area of the chip is 4384.215 sq micrometers.
 <p align="center">
-  <img src="/images/area.png">
+  <img src="/images/area_tejasbn.png">
 </p><br>
 
-## 9.2. Power 
-The total power consumed by the chip is 2.16 micro Watt
-<p align="center">
-  <img src="/images/res2.png">
-</p><br>
-
-## 9.3. Performance
+## 9.3. Performance using OpenSTA
 To find the performance of the chip, the netlist generated after the clock tree synthesis is considered. The generated netlist is analysed and is found  to contain 8 flipflops. Now, reg to reg path for all the flipflops are calculated using OpenSTA tool. Then, the reg to reg path with the worst slack is considered for calculating the performance. 
 
 The steps followed are 
@@ -585,13 +579,29 @@ The steps followed are
    report_checks -from _71_/CLK -to _76_/D
    ```
 <p align="center">
-  <img src="/images/performance.png">
+  <img src="/images/performance_tejasbn.png">
 </p><br>
 
 From here, tsetup is 0.09 ns and path delay is 1.52ns
 
 Now Tclk maximum = (0.09 + 1.52) ns = 1.61ns.
 So, the chip performance is 621.118MHz.
+
+## 9.4. Flip-Flop to Standard Cell ratio 
+The total power consumed by the chip is 2.16 micro Watt
+<p align="center">
+  <img src="/images/stat_dff_tejasbn.png">
+</p><br>
+
+## 9.5. Power 
+The total power consumed by the chip is 2.17 micro Watt. 
+ - Internal Power = 1.29 micro Watt
+ - Switching Power = 0.879 micro Watt
+ - Leakage Power = 0.199 nano Watt
+ - 
+<p align="center">
+  <img src="/images/power_tejasbn.png">
+</p><br>
 
 # 10. Author
 
