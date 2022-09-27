@@ -586,7 +586,7 @@ The steps followed are
 
 From here, tsetup is 0.09 ns and path delay is 1.52ns
 
-Now Tclk maximum = (0.09 + 1.52) ns = 1.61ns.
+Now Tclk minimum = (0.09 + 1.52) ns = 1.61ns.
 So, the chip performance is 621.118MHz.
 
 ## 9.4. Flip-Flop to Standard Cell ratio 
