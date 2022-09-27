@@ -611,7 +611,7 @@ The total power consumed by the chip is 2.17 micro Watt.
  - Internal Power = 1.29 micro Watt
  - Switching Power = 0.879 micro Watt
  - Leakage Power = 0.199 nano Watt
- - 
+ 
 <p align="center">
   <img src="/images/power_tejasbn.png">
 </p><br>
