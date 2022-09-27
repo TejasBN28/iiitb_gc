@@ -595,6 +595,18 @@ The total power consumed by the chip is 2.16 micro Watt
   <img src="/images/stat_dff_tejasbn.png">
 </p><br>
 
+```
+Flop ratio = Number of D Flip flops 
+             ______________________
+             Total Number of cells
+```
+
+```
+dfxtp_2 = 8,
+Number of cells = 47,
+Flop ratio = 8/47 = 0.1702 = 17.02%
+```
+
 ## 9.5. Power 
 The total power consumed by the chip is 2.17 micro Watt. 
  - Internal Power = 1.29 micro Watt
