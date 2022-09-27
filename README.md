@@ -544,8 +544,14 @@ ALso, `sky130_vsdinv` can be viewed in the routing layout.
   <img src="/images/vsdinv_postrouting.png">
 </p><br>
 
-# 9. Results
-## 9.1. Area
+# 9. Results for Mid-Term Examination
+## 9.1. Post Synthesis Gate Count from stat command
+The post synthesis gate count for my design is 47 cells. 
+<p align="center">
+  <img src="/images/stat_tejasbn.png">
+</p><br>
+
+## 9.2. Area from box command
 Area of the chip is 4384.215 sq micrometers.
 <p align="center">
   <img src="/images/area.png">
@@ -576,19 +582,16 @@ The steps followed are
    read_spef /home/tejasbn/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_gc.spef
    set_propagated_clock clk
    create_clock -name clk -period 10 {clk}
+   report_checks -from _71_/CLK -to _76_/D
    ```
-
-
 <p align="center">
   <img src="/images/performance.png">
 </p><br>
 
+From here, tsetup is 0.09 ns and path delay is 1.52ns
 
-
-From here, tsetup maximum is 0.2740052000 ns.
-
-Now Tclk maximum = (3.47347 +  0.2740052) ns = 3.7474752ns.
-So, the chip performance is 266.8463MHz.
+Now Tclk maximum = (0.09 + 1.52) ns = 1.61ns.
+So, the chip performance is 621.118MHz.
 
 # 10. Author
 
