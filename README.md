@@ -590,7 +590,6 @@ Now Tclk maximum = (0.09 + 1.52) ns = 1.61ns.
 So, the chip performance is 621.118MHz.
 
 ## 9.4. Flip-Flop to Standard Cell ratio 
-The total power consumed by the chip is 2.16 micro Watt
 <p align="center">
   <img src="/images/stat_dff_tejasbn.png">
 </p><br>
