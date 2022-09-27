@@ -558,56 +558,32 @@ The total power consumed by the chip is 2.16 micro Watt
 </p><br>
 
 ## 9.3. Performance
-To find the performance of the chip, the netlist generated after the clock tree synthesis is considered. The generated netlist is analysed and is found  to contain 8 flipflops. Now, reg to reg path for all the flipflops are calculated. Initially, the path with the longest delay is considered. Then it is analysed if the reg to reg path exists. If it exists, then the particular path is considered for frequency calculations.
+To find the performance of the chip, the netlist generated after the clock tree synthesis is considered. The generated netlist is analysed and is found  to contain 8 flipflops. Now, reg to reg path for all the flipflops are calculated using OpenSTA tool. Then, the reg to reg path with the worst slack is considered for calculating the performance. 
+
+The steps followed are 
+ - Invoke OpenSTA with the following commands.
+   ```
+   sudo make mount
+   sta
+   ```
+ - Type the following commands to run the OpenSTA tool  for my design.
+   ```
+   read_liberty -max /home/tejasbn/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib
+   read_liberty -min /home/tejasbn/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib
+   read_verilog /home/tejasbn/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_gc.v
+   link_design iiitb_gc
+   read_sdc /home/tejasbn/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_gc.sdc
+   read_spef /home/tejasbn/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_gc.spef
+   set_propagated_clock clk
+   create_clock -name clk -period 10 {clk}
+   ```
+
 
 <p align="center">
-  <img src="/images/unitf.png">
+  <img src="/images/performance.png">
 </p><br>
 
-<p align="center">
-  <img src="/images/pathreg2reg11.png">
-</p><br>
 
-<p align="center">
-  <img src="/images/pathreg2reg2.png">
-</p><br>
-
-<p align="center">
-  <img src="/images/pathreg2reg3.png">
-</p><br>
-
-<p align="center">
-  <img src="/images/pathreg2reg4.png">
-</p><br>
-
-<p align="center">
-  <img src="/images/pathreg2reg5.png">
-</p><br>
-
-<p align="center">
-  <img src="/images/pathreg2reg6.png">
-</p><br>
-
-<p align="center">
-  <img src="/images/pathreg2reg7.png">
-</p><br>
-
-<p align="center">
-  <img src="/images/pathreg2reg8.png">
-</p><br>
-
-Also, arrival time of the clock is calculated for all the clock pins of the 
-<p align="center">
-  <img src="/images/clkat1.png">
-</p><br>
-Here, we observe that clock arrival time is same foe all the clock pins. So, it can be neglected. 
-
-On analysing, it is discovered that maximum reg to reg delay is from D Flip Flop `sky130_fd_sc_hd__dfxtp_1 _71_` `CLK` pin to `D` pin of `sky130_fd_sc_hd__dfxtp_1 _74_`. The delay is 3.47347ns. 
-
-Now, the setup time of the D Flip Flop is extracted from the `sky130_fd_sc_hd__ff_n40C_1v56.lib` file. Steps of extracting the setup time is given [here](https://www.physicaldesign4u.com/2020/05/how-setup-and-hold-checks-are-defined.html?m=1).
-<p align="center">
-  <img src="/images/setup.png">
-</p><br>
 
 From here, tsetup maximum is 0.2740052000 ns.
 
