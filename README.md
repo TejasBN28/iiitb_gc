@@ -585,8 +585,8 @@ The steps followed are
 </p><br>
 
 From here, tsetup is 0.09 ns, path delay is 1.52ns and clock network delay is 0.19ns.
-Slack is 8.57ns and clock period is 10ns. 
 
+Slack is 8.57ns and clock period is 10ns. 
 So, clock frequency is 1/(10-8.57) = 699.3MHz.
 
 ## 9.4. Flip-Flop to Standard Cell ratio 
